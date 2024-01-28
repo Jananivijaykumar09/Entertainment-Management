@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Details</title>
+  <style>
+    /* Reset some default styles to ensure consistency across browsers */
+    body, h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Apply styles to the body element */
+    body {
+      background-image: url('/path/to/your/background-image.jpg'); /* Replace with the actual path to your background image */
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif; /* Specify a fallback font family */
+      margin: 0;
+      padding: 20px;
+      color: #6c056d; /* Set text color to white or a suitable contrast color */
+    }
+
+    /* Apply styles to the h1 element */
+    h1 {
+      background-color: rgba(180, 173, 173, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Apply styles to the ul element */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* Apply styles to each li element */
+    ul li {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Style headings and paragraphs within each li */
+    ul li h3 {
+      color: #333;
+    }
+
+    ul li p {
+      margin: 5px 0;
+    }
+
+    button {
+      background-color: #8e44ad; /* Violet color */
+      color: #ecf0f1; /* Light gray text color */
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      margin: 20px auto; /* Center the button */
+    }
+
+    button:hover {
+      background-color: #e74c3c; /* Dark pink color on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Booking Details</h1>
+
+  <!-- Booking Form -->
+  <form id="bookingForm" action="/booking" method="post">
+    <ul>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </li>
+
+      <li>
+        <label for="adultCount">Adult Count:</label>
+        <input type="number" id="adultCount" name="adultCount" required>
+      </li>
+
+      <li>
+        <label for="childrenCount">Children Count:</label>
+        <input type="number" id="childrenCount" name="childrenCount" required>
+      </li>
+
+      <li>
+        <label for="paymetmethod">Payment Method:</label>
+        <input type="number" id="paymentmethod" name="paymentmethod" required>
+      </li>
+      <li>
+        <label for="paymet">Payment:</label>
+        <input type="number" id="payment" name="payment" required>
+      </li>
+
+      <!-- Add more li elements for other fields -->
+    </ul>
+
+    <button type="button" onclick="submitForm()">Confirm Booking</button>
+    <button type="button" onclick="cancelForm()">Cancel Booking</button>
+  </form>
+
+  <!-- Add any additional content, links, or scripts as needed -->
+
+  <script>
+    function submitForm() {
+      // Perform any necessary form validation
+
+      // Display an alert
+      alert("Booking confirmed!");
+
+      // Redirect to the home page
+      window.location.href = "/home2"; // Replace with the actual path to your home page
+    }
+    function cancelForm() {
+      // Perform any necessary form validation
+
+      // Display an alert
+      alert("Booking cancelled!");
+
+      // Redirect to the home page
+      window.location.href = "/home2"; // Replace with the actual path to your home page
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/image/logofevicon.jpg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark</title>
+  <style>
+    /* Apply styles to the body element */
+    body {
+      background-image: url('/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #6c056d;
+    }
+
+    /* Apply styles to the h1 element */
+    h1 {
+      background-color: rgba(180, 173, 173, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Apply styles to the ul element */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* Apply styles to each li element */
+    ul li {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Style headings and paragraphs within each li */
+    ul li h3 {
+      color: #333;
+    }
+
+    ul li p {
+      margin: 5px 0;
+    }
+
+    button {
+      background-color: #8e44ad;
+      color: #ecf0f1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e74c3c;
+    }
+    /* Additional styles as needed */
+  </style>
+</head>
+<body>
+  <h1>Dark</h1>
+  <% if (events && events.length > 0) { %>
+    <ul>
+      <% events.forEach(event => { %>
+        <li>
+          <h3><%= event.eventName %></h3>
+          <p>Date: <%= event.eventDate %></p>
+          <% if (event.availableTickets && Array.isArray(event.availableTickets)) { %>
+            <p>Available Tickets: <%= event.availableTickets.join(', ') %></p>
+          <% } else { %>
+            <p>Available Tickets: N/A</p>
+          <% } %>
+          <!-- Include an additional parameter for adult count -->
+          <p>Adult Count: <%= event.adultCount %></p>
+          <p>Address: <%= event.eventAddress %></p>
+          <p>City: <%= event.eventCity %></p>
+          <p>State: <%= event.eventState %></p>
+          <p>Pincode: <%= event.eventPincode %></p>
+          <p>Category: <%= event.category %></p>
+          <p>Duration: <%= event.eventDuration %> hours</p>
+          <p>Option: <%= event.eventOption %></p>
+          <p>Description: <%= event.eventDescription %></p>
+          <form action="/booking" method="post">
+            <button type="submit" class="book-button">Book Now</button>
+          </form>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No Events available.</p>
+  <% } %>
+ 
+</body>
+</html>

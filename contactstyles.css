@@ -1,0 +1,124 @@
+body {
+    background: #e7e4e5;
+    background-image: url('CONTACCTBACK.jpg');
+    background-size: cover;
+    font: 700 12px/1.4 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: rgb(209, 175, 212);
+    color: rgb(20, 16, 20);
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #5a5858;
+    border-radius: 4px;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+     /* You can customize the background color */
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.home-button,
+.back-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.disable-back-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* You can customize the text color */
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #aa00ff; /* You can customize the color on hover */
+}
+
+
+
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #e538eb;
+    color: #f5f2f5;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #fbf2fc;
+}

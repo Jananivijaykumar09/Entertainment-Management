@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/images/logofevicon.jpg">
+
+  <meta charset="UTF-8">
+  <title>Event Organizer</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    
+    .form-group.horizontal {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    body {
+      background: linear-gradient(135deg, #3498db, #8e44ad);
+    }
+    .form-group.horizontal label {
+      flex: 1;
+    }
+    .form-group.horizontal input[type="text"],
+    .form-group.horizontal input[type="number"] {
+      flex: 2;
+      width: 100%; /* Adjust width as needed */
+    }
+    .form-group.textarea {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.textarea label {
+      margin-bottom: 5px;
+    }
+    .form-group.textarea textarea {
+      flex: 1;
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/signup_logo.jpg" alt="">
+    <nav class="navbar">
+      <ul>
+        <li><a href="/home2" class="home-button">Home</a></li>
+        <li><a href="/event" class="home-button">Event</a></li>
+        <li><a href="/dashboard" class="home-button">Dashboard</a></li>
+        <li><a href="#" class="back-button" onclick="history.back()">Back</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="event-organizer">
+    <h1>Event List</h1>
+    <h2>Create New Event</h2>
+    <form id="event-form" action="/admin" method="post">
+      <div class="form-group">
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" name="eventDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="availableTickets">Available Tickets Adult:</label>
+        <input type="number" id="availableTickets" name="availableTickets" required>
+      </div>
+      <div class="form-group">
+        <label for="availableTickets">Available Tickets Children:</label>
+        <input type="number" id="availableTickets" name="availableTickets" required>
+      </div>
+      <div class="form-group horizontal">
+        <label for="eventAddress">Event Address:</label>
+        <input type="text" id="eventAddress" name="eventAddress">
+      </div>
+
+      <div class="form-group horizontal">
+        <label for="eventCity">Event City:</label>
+        <input type="text" id="eventCity" name="eventCity">
+      </div>
+
+      <div class="form-group horizontal">
+        <label for="eventState">Event State:</label>
+        <input type="text" id="eventState" name="eventState">
+      </div>
+
+      <div class="form-group horizontal">
+        <label for="eventPincode">Event Pincode:</label>
+        <input type="number" id="eventPincode" name="eventPincode">
+      </div>
+
+<div class="form-group">
+  <label for="category">Category:</label>
+  <select id="category" name="category" required>
+    <option value="music">Music</option>
+    <option value="happystreet">Happy Street</option>
+    <option value="workshops">Workshops</option>
+    <option value="comedy">Stand-up Comedy</option>
+  </select>
+</div>
+
+      <div class="form-group">
+        <label for="eventDuration">Event Duration (in hours):</label>
+        <input type="number" id="eventDuration" name="eventDuration" required>
+      </div>
+
+     
+<div class="form-group">
+  <label for="eventOption">Event Options:</label>
+  <select id="eventOption" name="eventOption" required>
+  </select>
+</div>
+
+      <div class="form-group textarea">
+        <label for="eventDescription">Event Description:</label>
+        <textarea id="eventDescription" name="eventDescription" placeholder="Event Description..." required></textarea>
+      </div>
+
+
+      <button type="submit">Save Details</button>
+    </form>
+  </div>
+
+  <script>
+    const categoryOptions = {
+      music: ['tamil', 'pop', 'american', 'kpop', 'jazz'],
+      happystreet: ['event', 'food', 'art', 'sports', 'kids'],
+      comedy: ['stand_up', 'improv', 'sketch', 'slapstick', 'dark'],
+      workshops: ['magic', 'pottery', 'artistic', 'dance', 'culinary'],
+    };
+  
+    function updateEventOptions() {
+      const categorySelect = document.getElementById('category');
+      const eventOptionSelect = document.getElementById('eventOption');
+  
+      const selectedCategory = categorySelect.value;
+      const options = categoryOptions[selectedCategory] || [];
+  
+      // Clear existing options
+      eventOptionSelect.innerHTML = '';
+  
+      // Populate options
+      options.forEach((option) => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.text = option;
+        eventOptionSelect.add(optionElement);
+      });
+    }
+  
+    // Call the function when the page loads to populate options based on the default selected category
+    document.addEventListener('DOMContentLoaded', updateEventOptions);
+  
+    // Attach the updateEventOptions function to the change event of the category select
+    document.getElementById('category').addEventListener('change', updateEventOptions);
+  </script>
+  
+
+  <script src="admin.js"></script>
+</body>
+</html>

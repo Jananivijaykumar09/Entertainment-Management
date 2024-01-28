@@ -1,0 +1,137 @@
+.div1{
+    width: 1440px;
+     height: 2092px;
+      position: relative; 
+      
+}
+
+.div2{
+    width: 227px; 
+    padding-top: 19px; 
+    padding-bottom: 19px; 
+    left: 402px; 
+    top: 562px;
+    position: absolute; 
+    background: #426B1F;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+}
+.div3{
+    color: rgb(247, 243, 243); 
+    font-size: 20px;
+     font-family: Inter;
+     font-weight: 600;
+     line-height: 26px;
+     word-wrap: break-word;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #426B1F; 
+    color: #fff; 
+    text-decoration: none;
+    border: none; 
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+.div4{
+    width: 227px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 76px; padding-right: 75px;
+    left: 825px; top: 562px;
+    position: absolute;
+    background: #426B1F;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+.div5{
+    width: 1440px; 
+    height: 112px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute;
+}
+.div6{
+    left: 96px; top: 41px; 
+    position: absolute; 
+    color: #426B1F; 
+    font-size: 32px; font-family: Newsreader; 
+    font-weight: 500; line-height: 32px; 
+    word-wrap: break-word;
+}
+.div7{
+    left: 939px; top: 47px; 
+    position: absolute; 
+    text-align: center; 
+    color: black; 
+    font-size: 16px; font-family: Inter; 
+    font-weight: 400; line-height: 20.80px; 
+    word-wrap: break-word;
+}
+.div8{
+    left: 1073px; top: 47px; 
+    position: absolute; 
+    text-align: center; 
+    color: black; 
+    font-size: 16px; font-family: Inter; 
+    font-weight: 400; line-height: 20.80px; 
+    word-wrap: break-word;
+}
+.div9{
+    width: 56px; height: 16px; 
+    left: 713px; top: 50px; 
+    position: absolute; 
+    text-align: center; color: black; 
+    font-size: 16px; font-family: Inter; 
+    font-weight: 400; line-height: 20.80px; 
+    word-wrap: break-word;
+}
+.div10{
+    left: 843px; top: 47px; 
+    position: absolute; text-align: center; color: black; 
+    font-size: 16px; font-family: Inter; font-weight: 400; 
+    line-height: 20.80px; word-wrap: break-word;
+}
+.div11{
+    width: 53px; height: 55px; 
+    left: 28px; top: 23px; 
+    position: absolute;
+}
+.div12{
+    width: 253px; height: 236px; 
+    left: 384px; top: 239px; 
+    position: absolute;
+}
+.div13{
+    left: 654px; top: 345px; 
+    position: absolute; 
+    text-align: center; 
+    color: black; 
+    font-size: 64px; font-family: Newsreader; 
+    font-weight: 400; line-height: 76.80px;
+    word-wrap: break-word;
+}
+        /* Define responsive styles for various screen sizes */
+        @media screen and (max-width: 767px) {
+            body {
+                background: url('/images/homepage_copy.jpg') no-repeat center center fixed;
+                background-size: cover;
+            }
+            
+            .div5 {
+                text-align: center;
+            }
+            /* Add more responsive styles for smaller screens */
+        }
+
+        @media screen and (min-width: 768px) {
+            /* Larger screen styles can go here */
+        }

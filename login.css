@@ -1,0 +1,154 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/login_background.webp'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.eye-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Optional: Change eye icon color on hover */
+.eye-icon:hover {
+    color: #333;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+     /* You can customize the background color */
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.home-button,
+.back-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.disable-back-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+
+}
+.logo {
+    float: left;
+    }
+    .logo img {
+    width: 100%;
+    padding: 15px 0;
+    }
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* You can customize the text color */
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #aa00ff; /* You can customize the color on hover */
+}
+.logo {
+    max-width: 450px;
+    margin-bottom: 20px;
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Position from the top */
+    left: 5px; /* Position from the left */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #83237b;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7d1b96;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+
+

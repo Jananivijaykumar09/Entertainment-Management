@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="/images/logofevicon.jpg">
+
+  <title>Organizer Dashboard</title>
+  <style>
+    /* Inline CSS styling for the table */
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f339f3;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #3498db, #8e44ad);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgb(255, 255, 255);
+    }
+
+    /* Additional CSS for the content */
+    .container {
+      width: 80%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    /* Other styles for your specific content */
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Organizer Dashboard</h1>
+  
+  <div>
+    <h2>Total Bookings: <span id="totalBookings">0</span></h2>
+  </div>
+
+  <table id="bookingTable">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>User</th>
+        <th>Date</th>
+        <!-- Add more table headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table body will be populated dynamically -->
+    </tbody>
+  </table>
+  <!-- Inside dashboard.html -->
+
+<div class="ticket-availability">
+    <h2>Ticket Availability</h2>
+    <div>
+      <label for="totalAdultTickets">Total Adult Tickets Booked:</label>
+      <input type="number" id="totalAdultTickets" value="50"> <!-- Assuming this displays the total booked adult tickets -->
+    </div>
+    <div>
+      <label for="totalChildTickets">Total Child Tickets Booked:</label>
+      <input type="number" id="totalChildTickets" value="30"> <!-- Assuming this displays the total booked child tickets -->
+    </div>
+    <div>
+      <h3>Remaining Available Tickets:</h3>
+      <p id="remainingTickets">Calculating...</p>
+    </div>
+  </div>
+  
+  <script src="dashborad.js"></script>
+</body>
+</html>

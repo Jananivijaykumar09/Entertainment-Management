@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      background-image: url('/images/homepage_copy.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .split-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .signup-panel,
+    .login-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .form-container {
+      max-width: 300px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f34dd4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add this line for a smooth background color transition */
+  }
+
+  .form-container button:hover {
+    background-color: #d625ab; /* Change the background color on hover */
+  }
+
+    .form-container input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #f34dd4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .welcome-text {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .welcome-text span {
+      color: #3498db;
+    }
+    .img{
+   margin-right: 80px;
+   
+}
+
+  .nav-area {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 1200px;
+  }
+
+  .nav-area li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .nav-area a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s; /* Add this line for a smooth color transition */
+  }
+
+  .nav-area a:hover {
+    background-color: #f34dd4;
+    color: #fff; /* Change the color on hover */
+  }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/signup_logo.jpg" alt="" class="img" style="width: 350px;">
+    <div class="wrapper">
+      <div class="ENTERTAINENTVERSE"></div>
+      <div class="logo-container"></div>
+      
+      <ul class="nav-area">
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+       </ul>
+</div>
+    </div>
+    <div class="welcome-text">
+      <h1>"Unleash Your <span>Entertainment</span> Odyssey!"</h1>
+    </div>
+  </header>
+
+  <div class="split-container">
+    <div class="signup-panel">
+      <div class="form-container">
+        <h2>For Users</h2>
+        <form>
+            <button type="button" onclick="redirectTousersLogin()">Signup</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="login-panel">
+      <div class="form-container">
+        <h2>For Admin</h2>
+        <form>
+            <button type="button" onclick="redirectToadminLogin()">Signup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function redirectTousersLogin() {
+      window.location.href = '/signup';
+    }
+    function redirectToadminLogin() {
+      window.location.href = '/signup2';
+    }
+  </script>
+</body>
+</html>

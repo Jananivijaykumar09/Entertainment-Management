@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/images/logofevicon.jpg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <title>Music Event</title>
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+     /* You can customize the background color */
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.home-button,
+.back-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.disable-back-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 5px;
+        margin-top: 20px;
+       }
+
+        .navbar li {
+          display: inline;
+          margin-left: 20px;
+
+        }
+
+        .navbar a {
+         text-decoration: none;
+         color: white; /* You can customize the text color */
+         font-weight: bold;
+       }
+
+       .navbar a:hover {
+           color: #aa00ff; /* You can customize the color on hover */
+       }
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        .event-info {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        
+        .venue {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        
+        .description {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        
+        .video {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .price {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        
+        .book-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0077b6;
+            /* Subtle color */
+            color: #fff;
+            text-decoration: none;
+            /* Remove underline */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .book-button:hover {
+            background-color: #023e8a;
+            /* Hover color */
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .logo {
+    float: left;
+    }
+    .logo img {
+    width: 100%;
+    padding: 15px 0;
+    }
+    </style>
+</head>
+
+<body>
+      
+    <img  class="logo" src="/images/signup_logo.jpg" alt=""> 
+    <nav class="navbar">
+
+        <ul>
+            <li><a href="/home" class="home-button">Home</a></li>
+            <li><a href="/signup" class="home-button">Signup</a></li>
+            <li><a href="/login" class="home-button">Login</a></li>
+            <li><a href="/admin" class="home-button">Admin</a></li>
+            <li><a href="#" class="back-button" onclick="history.back()">Back</a></li>
+        </ul>
+    </nav>
+   <header>
+        <h1>Your Music Event</h1>
+    </header>
+
+    <div class="event-info">
+        <h2 class="venue">Event Venue</h2>
+        <p class="description">Description of the event goes here. Add more details about the event, the artists, and what attendees can expect.</p>
+        <iframe class="video" src="https://www.youtube.com/embed/your-video-embed-code" frameborder="0" allowfullscreen></iframe>
+        <p class="price">Ticket Price: $50</p>
+        <a class="book-button" href="/booking">Book Now</a>
+    </div>
+
+    <footer>
+        &copy; 2023 Your Music Event
+    </footer>
+</body>
+
+</html>

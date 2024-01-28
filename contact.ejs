@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/png" href="/images/logofevicon.jpg">
+    <link rel="stylesheet" href="/contactstyles.css">
+</head>
+<body>
+     
+    <img  class="logo" src="/images/signup_logo.jpg" alt=""> 
+    <nav class="navbar">
+
+        <ul>
+            <li><a href="/home" class="home-button">Home</a></li>
+            <li><a href="#" class="back-button" onclick="history.back()">Back</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Contact Info: +91 1234567890</p>
+    </header>
+
+    <section class="contact-form">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNo">Contact No:</label>
+                <input type="text" id="contactNo" name="contactNo" required>
+            </div>
+
+            <div class="form-group message">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group buttons">
+                <input type="submit" value="Send">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </section>
+
+    <script >
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var contactNo = document.getElementById("contactNo").value;
+            var message = document.getElementById("message").value;
+    
+            // Validate Name
+            if (name === "") {
+                alert("Please enter your name");
+                return false;
+            }
+    
+            // Validate Email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+    
+            // Validate Contact No
+            var contactNoRegex = /^\d{10}$/; // Assuming a 10-digit phone number
+            if (!contactNoRegex.test(contactNo)) {
+                alert("Please enter a valid 10-digit contact number");
+                return false;
+            }
+    
+            // Validate Message
+            if (message === "") {
+                alert("Please enter your message");
+                return false;
+            }
+    
+            return true; // Form is valid
+        }
+    
+        // Attach the validation function to the form's onsubmit event
+        document.getElementById("contactForm").onsubmit = function () {
+            return validateForm();
+        };
+    </script>
+
+</body>
+</html>

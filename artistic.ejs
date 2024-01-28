@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Artistic</title>
+    <style>
+      /* Apply styles to the body element */
+     body {
+       background-image: url('/images/bg.jpg'); /* Replace 'background.jpg' with your image file path */
+       background-size: cover;
+       background-position: center;
+       font-family: 'Arial', sans-serif; /* Specify a fallback font family */
+       margin: 0; /* Remove default margin to cover the entire viewport */
+       padding: 20px; /* Add padding to the body content */
+       color: #6c056d; /* Set text color to white or a suitable contrast color */
+     }
+     
+     /* Apply styles to the h1 element */
+     h1 {
+       background-color: rgba(180, 173, 173, 0.5); /* Add a semi-transparent background to the heading */
+       padding: 10px;
+       border-radius: 8px;
+     }
+     
+     /* Apply styles to the ul element */
+     ul {
+       list-style-type: none;
+       padding: 0;
+     }
+     
+     /* Apply styles to each li element */
+     ul li {
+       margin-bottom: 20px;
+       padding: 10px;
+       border: 1px solid #ccc;
+       border-radius: 8px;
+       background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background to each list item */
+     }
+     
+     /* Style headings and paragraphs within each li */
+     ul li h3 {
+       color: #333;
+     }
+     
+     ul li p {
+       margin: 5px 0;
+     }
+     
+     button {
+        background-color: #8e44ad; /* Violet color */
+        color: #ecf0f1; /* Light gray text color */
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #e74c3c; /* Dark pink color on hover */
+      }/* Additional styles as needed */
+     
+         </style>
+     
+</head>
+<body>
+    <h1>Artistic</h1>
+    <% if (events && events.length > 0) { %>
+      <ul>
+        <% events.forEach(event => { %>
+          <li>
+            <h3><%= event.eventName %></h3>
+            <p>Date: <%= event.eventDate %></p>
+            <% if (event.availableTickets && Array.isArray(event.availableTickets)) { %>
+              <p>Available Tickets: <%= event.availableTickets.join(', ') %></p>
+            <% } else { %>
+              <p>Available Tickets: N/A</p>
+            <% } %>
+            <p>Address: <%= event.eventAddress %></p>
+            <p>City: <%= event.eventCity %></p>
+            <p>State: <%= event.eventState %></p>
+            <p>Pincode: <%= event.eventPincode %></p>
+            <p>Category: <%= event.category %></p>
+            <p>Duration: <%= event.eventDuration %> hours</p>
+            <p>Option: <%= event.eventOption %></p>
+            <p>Description: <%= event.eventDescription %></p>
+            <form action="/booking" method="post">
+              <button type="submit" class="book-button">Book Now</button>
+            </form>
+              </li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No Events available.</p>
+    <% } %>
+
+</body>
+</html>

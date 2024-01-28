@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/images/logofevicon.jpg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/signup.css">
+</head>
+<body> 
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="/home2" class="home-button">Home</a></li>
+            <li><a href="/signup2" class="home-button">Signup</a></li>
+            <li><a href="/login2" class="home-button">Login</a></li>
+            <li><a href="#" class="back-button" onclick="history.back()">Back</a></li>
+        </ul>
+    </nav>
+    <img class="logo" src="/images/signup_logo.jpg" alt="Logo"> 
+    <div class="container">
+        <h2>Signup</h2>
+        <form action="/signup2" method="post" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="name">Username</label>
+                <input type="text" id="name" name="name" required>
+                <div id="username-error" class="error-message"></div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error-message"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" required>
+                    <span class="eye-icon" onclick="togglePassword(this)"></span>
+                </div>
+                <div id="password-error" class="error-message"></div>
+            </div>
+                <button type="submit">Signup</button><br\>
+                <h5>Don't have an account.....?
+                <a href="/login2" class="login-link">Login</a></h5>
+            </form>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
+

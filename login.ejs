@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/images/logofevicon.jpg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/home2" class="home-button">Home</a></li>
+            <li><a href="/signup" class="home-button">Signup</a></li>
+            <li><a href="/login" class="home-button">Login</a></li>
+            <li><a href="#" class="back-button" onclick="history.back()">Back</a></li>
+        </ul>
+    </nav>
+
+    <img class="logo" src="/images/signup_logo.jpg" alt="Logo"> 
+
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login" method="post" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <div id="username-error" class="error-message"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" required>
+                    <span class="eye-icon" onclick="togglePassword(this)">👁️</span>
+                </div>
+                <div id="password-error" class="error-message"></div>
+            </div>
+            <button type="submit">Login</button><br\>
+            <h5>Don't have an account.....?
+            <a href="/signup" class="signup-link">Signup</a></h5>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

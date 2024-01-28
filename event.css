@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+     /* You can customize the background color */
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.home-button,
+.back-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.disable-back-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* You can customize the text color */
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #aa00ff; /* You can customize the color on hover */
+}
+
+
+
+.background-image {
+    background-image: url('/images/eventbg2.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ensure the background covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-container {
+    text-align: center;
+    padding: 50px 0 20px; /* Slightly increase top padding for the heading */
+
+    
+}
+
+.heading {
+    font-size: 48px; /* Increase font size for a more prominent heading */
+    color: #0033ff; /* Gold color for a glittery look */
+    margin: 0;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+
+ 
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -500px;
+    gap: 10px; /* Gap between categories */
+    padding: 20px;
+}
+
+.category {
+    background-color: transparent; /* No background color */
+    border: 1px solid #1d0c8a;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 300px; /* Set a fixed height for all categories */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.category img {
+    width: 100%;
+    height: 100%; /* Make the images cover the entire category */
+    display: block;
+    border-radius: 10px;
+    object-fit: cover; /* Maintain aspect ratio while covering */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.category:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.category-content {
+    padding: 20px;
+}
+
+.category-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00CCFF; /* Sky Blue for Music */
+    margin: 10px 0;
+}
+
+.category-name.music {
+    color: #0011ff; /* Sky Blue */
+}
+
+.category-name.happystreet {
+    color: #FF3366; /* Magenta for Happy Street */
+}
+
+.category-name.workshop {
+    color: #045214; /* Lime Green for Workshop */
+}
+
+.category-name.comedy {
+    color: #FF1493; /* Deep Pink for Comedy */
+}
+.logo{
+position: absolute;
+top: 10px;
+left: 10px;
+z-index: 1;
+}
+
+.category-description {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.category-button {
+    display: inline-block;
+    background-color: #FF5733; /* Coral color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.category-button:hover {
+    background-color: #FF3366; /* Hover color - Magenta */
+}
